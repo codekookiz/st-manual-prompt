@@ -20,7 +20,7 @@ def get_huggingface_token() :
 @st.cache_resource
 def initialize_models() :
     # 허깅페이스에서 받아서 사용
-    model_name = 'mistralai/Mistral-7B-Instruct-v0.2'
+    model_name = 'mistralai/Mistral-7B-Instruct-v0.3'
 
     token = get_huggingface_token()
 
