@@ -7,7 +7,13 @@ import os
 
 
 def get_huggingface_token() :
-    token = st.secrets.get('HUGGINGFACE_API_TOKEN')
+
+    # 실서버에서는 os의 환경변수에 세팅
+    # 환경 변수 읽어오는 코드로 작성해야 함
+    token = os.environ.get('HUGGINGFACE_API_TOKEN')
+    # 토큰이 환경변수에 없을 경우 로컬에서 토큰 불러오기
+    if token is None :
+        token = st.secrets.get('HUGGINGFACE_API_TOKEN')
     return token
 
 
