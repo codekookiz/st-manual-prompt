@@ -55,6 +55,8 @@ def get_index_from_huggingface() :
 
     index = load_index_from_storage(storage_context)
 
+    return index
+
 
 def main() :
     pass
